@@ -15,8 +15,8 @@ public class LinearSearch {
 		System.out.println("Enter search element: ");
 		int search = input.nextInt();
 
-		int flag = 0;
-		for (int i = 0; i < n; i++) {
+		int flag = 0, i = 0;
+		for (i = 0; i < n; i++) {
 			if (array[i] == search) {
 				flag = 1;
 				break;
@@ -25,7 +25,7 @@ public class LinearSearch {
 		if (flag == 1) {
 			System.out.println("Element found at position: " + (i + 1));
 		} else {
-			System.out.println("Element not found.")
+			System.out.println("Element not found.");
 		}
 	}
 }

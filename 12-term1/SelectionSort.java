@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class BubbleSort {
+public class SelectionSort {
 	public static void main(String args[]) {
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter number of elements: ");
