@@ -5,7 +5,7 @@ public class BinarySearch {
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter number of elements: ");
 		int n = input.nextInt();
-		int array[] = new int[n];
+		int array[] = new int[n]; // array 'a'
 		
 		System.out.println("Enter " + n + " elements, sorted.");
 
@@ -17,25 +17,25 @@ public class BinarySearch {
 		int search = input.nextInt();
 
 		int first = 0;
+		int mid = 0;
 		int last = n - 1;
 		int flag = 0;
-		int mid = (first + last) / 2;
 
 		while (first <= last) {
 			mid = (first + last) / 2;
 
-			if (array[mid] > search) {
-				last = mid;
-			} else if (array[mid] < search) {
-				first = mid;
-			} else if (array[mid] == search) {
+			if (array[mid] == search) {
 				flag = 1;
-				break;
+				break; // To prevent infinite loop
+			} else if (array[mid] > search) {
+				last = mid - 1;
+			} else if (array[mid] < search) {
+				first = mid + 1;
 			}
 		}
 
 		if (flag == 1) {
-			System.out.println("Element found at position: " + (mid + 1));
+			System.out.println("Element found.");
 		} else {
 			System.out.println("Element not found.");
 		}
