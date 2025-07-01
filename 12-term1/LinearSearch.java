@@ -19,11 +19,10 @@ public class LinearSearch {
 		for (i = 0; i < n; i++) {
 			if (array[i] == search) {
 				flag = 1;
-				break;
 			}
 		}
 		if (flag == 1) {
-			System.out.println("Element found at position: " + (i + 1));
+			System.out.println("Element found.");
 		} else {
 			System.out.println("Element not found.");
 		}
